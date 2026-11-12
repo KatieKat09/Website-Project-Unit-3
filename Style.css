@@ -1,0 +1,293 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf4;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+header {
+    background-color: #ffffff;
+    padding: 15px 7%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #e58b55;
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #e58b55;
+}
+
+
+
+.hero {
+    min-height: 500px;
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1600")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+
+
+.btn {
+    display: inline-block;
+    background-color: #e58b55;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #c96c3c;
+}
+
+.secondary {
+    background-color: #548b73;
+}
+
+.secondary:hover {
+    background-color: #3c7059;
+}
+
+
+
+.about {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+.about h2 {
+    color: #e58b55;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px 7%;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.feature-card h3 {
+    color: #e58b55;
+    margin-bottom: 15px;
+}
+
+.feature-card a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #548b73;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+.page-heading {
+    background-color: #f5e4d4;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.page-heading h1 {
+    font-size: 35px;
+    color: #b96b42;
+    margin-bottom: 10px;
+}
+
+
+
+.pet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 50px 7%;
+}
+
+.pet-card {
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.pet-card h3 {
+    color: #e58b55;
+    margin-top: 15px;
+}
+
+.pet-card p {
+    margin: 8px 10px;
+}
+
+
+
+.form-container {
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #e58b55;
+    margin-bottom: 25px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+
+@media (max-width: 900px) {
+    .pet-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .pet-container {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+}
