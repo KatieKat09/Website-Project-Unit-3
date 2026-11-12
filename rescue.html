@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Rescue | Happy Paws</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">🐾 Happy Paws</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="adoption.html">Adoption</a></li>
+            <li><a href="rescue.html">Rescue</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-heading">
+    <h1>Help Us Rescue an Animal</h1>
+    <p>Every rescue starts with someone who cares.</p>
+</section>
+
+<section class="form-container">
+
+    <h2>Animal Rescue Request</h2>
+
+    <form id="rescueForm">
+
+        <label for="reporter">Your Name</label>
+        <input type="text" id="reporter" required>
+
+        <label for="rescueEmail">Your Email</label>
+        <input type="email" id="rescueEmail" required>
+
+        <label for="animal">Animal Type</label>
+        <select id="animal" required>
+            <option value="">Select Animal</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="condition">Animal Condition</label>
+        <select id="condition" required>
+            <option value="">Select Condition</option>
+            <option value="Abandoned">Abandoned</option>
+            <option value="Injured">Injured</option>
+            <option value="Lost">Lost</option>
+            <option value="In Danger">In Danger</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="location">Animal Location</label>
+        <input type="text" id="location" placeholder="Enter location" required>
+
+        <label for="details">Additional Information</label>
+        <textarea id="details" rows="5"
+                  placeholder="Describe the animal and situation..."
+                  required></textarea>
+
+        <button type="submit" class="btn">Submit Rescue Request</button>
+
+    </form>
+
+    <p id="rescueResponse" role="status" aria-live="polite"></p>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Happy Paws Animal Rescue. All Rights Reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
